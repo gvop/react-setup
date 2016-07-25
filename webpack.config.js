@@ -1,21 +1,22 @@
-module.export = {
-  entry : './main.js',
-  output : {
+module.exports = {
+  entry: './main.js',
+  output: {
     path: './',
+    publicPath: '/',
     filename: 'index.js'
   },
   devServer: {
-    inline : true,
+    inline: true,
     port: 3333
   },
-  module : {
+  module: {
     loaders: [
       {
         test: /\.js$/,
         exclude: /node_modules/,
         loader: 'babel',
         query: {
-          presets : ['es2015', 'react']
+          presets: ['es2015', 'react']
         }
       }
     ]
